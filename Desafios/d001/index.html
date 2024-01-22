@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mensagens</title>
+    <style>
+        body {
+            font: 12pt Arial;
+        }
+
+        button {
+            font-size: 12pt;
+            padding: 30px;
+        }
+
+    </style>
+</head>
+<body>
+    <h1>Desafio das Mensagens</h1>
+
+    <button id="1" onclick="clicou (id)">Botão 1</button>
+    <button id="2" onclick="clicou (id)">Botão 2</button>
+    <button id="3" onclick="clicou (id)">Botão 3</button>
+
+    <script>
+        function clicou (id) {
+            window.alert(`Você clicou no ${id}º botão!`)
+        }
+    </script>
+</body>
+</html>
