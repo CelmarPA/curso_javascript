@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Conversor de medidas</title>
+    <style>
+        body {
+            font: 1em Arial;
+        }
+
+        button {
+            font-size: 1em;
+            padding: 20px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Conversor de Medidas</h1>
+    <button onclick="converter()">Converter</button>
+    <section id="res">
+        <p>Clique no botão acima para iniciar.</p>
+    </section>
+
+    <script>
+        function converter() {
+            let med = Number(window.prompt('Digite uma distância em metros (m):'))
+        
+            let conv = window.document.querySelector('section#res')
+
+            // Converte a medida já com o sistema de unidade do país
+            // Converte para Km
+            km = med / 1000
+            km = km.toLocaleString('pt-BR', {minimumFractionDigits: 1, maximumFractionDigits: 3});
+            // Converte para Hm
+            hm = med / 100
+            hm = hm.toLocaleString('pt-BR', {minimumFractionDigits: 1, maximumFractionDigits: 3})
+            // Converte para Dam
+            dam = med / 10 
+            dam = dam.toLocaleString('pt-BR', {minimumFractionDigits: 1,  maximumFractionDigits: 3})
+            // Converte para dm
+            dm = med * 10
+            dm = dm.toLocaleString('pt-BR', {minimumFractionDigits: 1, maximumFractionDigits: 3});
+            // Converte para cm
+            cm = med * 100
+            cm = cm.toLocaleString('pt-BR', {minimumFractionDigits: 0, maximumFractionDigits: 3})
+            // Converte para mm
+            mm = med * 1000
+            mm = mm.toLocaleString('pt-BR', {minimumFractionDigits: 0, maximumFractionDigits: 3})
+
+            // Mostra os resultados na página
+            conv.innerHTML = `<h2>A distância de ${med.toLocaleString('pt-BR', {minimumFractionDigits: 1, maximumFractionDigits: 3})} metros, corresponde a...</h2>`
+
+            conv.innerHTML += `<p>${km} quilômetros (Km)</p>`
+            conv.innerHTML += `<p>${hm} hectômetros (Hm)</p>`
+            conv.innerHTML += `<p>${dam} decâmtros (Dam)</p>`
+            conv.innerHTML += `<p>${dm} decímetros (dm)</p>`
+            conv.innerHTML += `<p>${cm} centímetros (cm)</p>`
+            conv.innerHTML += `<p>${mm} milímetros (mm)</p>`
+        }
+    </script>
+</body>
+</html>

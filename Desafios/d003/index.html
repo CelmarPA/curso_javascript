@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Antes e Depois</title>
+    <style>
+        body {
+            font: 1em Arial;
+        }
+
+        button {
+            font-size: 1em;
+            padding: 30px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Antes e depois</h1>
+    <button onclick="ant_suc()">Antecessor e Sucessor</button>
+
+    <script>
+        function ant_suc(){
+            let num = Number(window.prompt('Digite um número inteiro qualquer:'))
+
+            ant = num - 1
+            suc = num + 1
+
+            window.alert(`Antes de ${num}, temos o número ${ant}. \nDepois de ${num}, temos o número ${suc}.`)
+    
+        }            
+    </script>
+</body>
+</html>

@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Número com JS</title>
+    <style>
+        body {
+            font: 1em Arial;
+        }
+        
+        button {
+            font-size: 1em;
+            padding: 30px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Somando dois números</h1>
+    <button onclick="somar()">Iniciar a soma</button>
+    <section id="res">
+        <p>O resultado vem aqui...</p>
+        
+    </section>
+    
+    <script>
+        // Função para somar dois numeros
+        function somar() {
+            let n1 = Number(window.prompt('Digite um número:'))
+            let n2 = Number(window.prompt('Digite outro número:'))
+
+            soma = n1 + n2
+
+            let res = window.document.querySelector('section#res')
+            // Pega o elemento res e modifica o HTML interno
+            res.innerHTML = `<p>A soma entre <mark>${n1}</mark> e <mark>${n2}</mark> é igual a <strong>${soma}</strong>!`
+        }
+    </script>
+</body>
+</html>

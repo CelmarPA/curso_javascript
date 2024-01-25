@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Números com JS</title>
+    <style>
+        body {
+            font: 1em Arial;
+        }
+
+        button {
+            font-size: 1em;
+            padding: 30px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Vários cálculos com JS</h1>
+    <button onclick="calcular()">Clique para calcular</button>
+    <section id="analise">
+        <p>O resultado vai aparecer aqui...</p>
+    </section>
+
+    <script>
+        function calcular() {
+            let num = Number(window.prompt('Digite um número:'))
+
+            let analise = window.document.querySelector('section#analise')
+
+            analise.innerHTML = `<p>O número a ser analisado aqui será o <strong>${num}</strong></p><hr>` // O <hr> cria uma linha no documento
+            
+            // Calcula o valor absoluto
+            analise.innerHTML += `<p>O seu valor absoluto é ${Math.abs(num)}</p>`
+            // Trunca o valor para o número inteiro
+            analise.innerHTML += `<p>A sua parte inteira é ${Math.trunc(num)}</p>`
+            // Arrenda para o inteiro mais proximo
+            analise.innerHTML += `<p>O valor inteiro mais próximo é ${Math.ceil(num)}</p>`
+            // Calcula a raiz quadrada
+            analise.innerHTML += `<p>A sua raiz quadrada é ${Math.sqrt(num)}</p>`
+            // Calcula a raiz cúbica
+            analise.innerHTML += `<p>A sua raiz cúbica é ${Math.cbrt(num)}</p>`
+            // Calcula a  exponenciação
+            analise.innerHTML += `<p>O valor de ${num}<sup>2</sup> é ${Math.pow(10, 2)}</p>`
+            analise.innerHTML += `<p>O valor de ${num}<sup>3</sup> é ${Math.pow(10, 3)}</p>`
+        }
+    </script>
+    </body>
+</html>
