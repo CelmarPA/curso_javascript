@@ -1,0 +1,28 @@
+@charset "UTF-8";
+
+body {
+    font: 1em Arial;
+}
+
+button {
+    font-size: 1em;
+    padding: 20px;
+}
+
+span#aprov {
+    background-color: rgba(81, 233, 81, 0.63);
+    font-weight: bold;
+    color: green;
+}
+
+span#recup {
+    background-color: rgb(250, 222, 170);
+    font-weight: bold;
+    color: rgb(255, 115, 0);
+}
+
+span#reprov {
+    background-color: rgb(253, 147, 147);
+    font-weight: bold;
+    color: rgb(146, 6, 6);    
+}
